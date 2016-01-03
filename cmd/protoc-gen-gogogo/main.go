@@ -1,8 +1,6 @@
 package main
 
 import (
-	"fmt"
-	"os"
 	"strings"
 
 	"github.com/gogo/protobuf/gogoproto"
@@ -35,7 +33,6 @@ func FixFieldNames(field *descriptor.FieldDescriptorProto) {
 	if !ok {
 		return
 	}
-	fmt.Fprintln(os.Stderr, name)
 	if field.Options == nil {
 		field.Options = &descriptor.FieldOptions{}
 	}
